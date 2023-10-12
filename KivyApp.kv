@@ -1,0 +1,83 @@
+<MyScreenManager>:
+    LoginScreen:
+        name: "LoginScreen"
+    Register:
+        name: "Register"
+    LoggedIn:
+        name: "LoggedIn"
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Login Screen"
+
+        GridLayout:
+            cols: 2
+            rows: 2
+            Label:
+                width: ("100dp")
+                height: ("50dp")
+                text: "Username"
+                size_hint: 0.5,0.25
+            TextInput:
+                width: ("100dp")
+                height: ("50dp")
+                size_hint: 0.5,0.25
+            Label:
+                width: ("100dp")
+                height: ("50dp")
+                text: "Password"
+                size_hint: 0.5,0.25
+            TextInput:
+                width: ("100dp")
+                height: ("50dp")
+                size_hint: 0.5,0.25
+
+        Button:
+            text: "Log in"
+        Button:
+            text: "Sign up"
+            on_release: app.root.current = "Register"
+
+
+<Register>:
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Registration Screen"
+
+        GridLayout:
+            cols: 2
+            rows: 2
+            Label:
+                width: ("100dp")
+                height: ("50dp")
+                text: "Username"
+                size_hint: 0.5, 0.25
+            TextInput:
+                id: username_input
+                width: ("100dp")
+                height: ("50dp")
+                size_hint: 0.5, 0.25
+            Label:
+                width: ("100dp")
+                height: ("50dp")
+                text: "Password"
+                size_hint: 0.5, 0.25
+            TextInput:
+                id: password_input
+                width: ("100dp")
+                height: ("50dp")
+                size_hint: 0.5, 0.25
+
+        Button:
+            text: "Create Account"
+            on_release: app.root.current = "LoginScreen"
+
+
+
+
+
+
+
